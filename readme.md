@@ -8,6 +8,18 @@
 * [x] 矩阵运算
 * [x] gamma变换，(先归一化待1，用gamma作为指数值求出新的像素值再还原，后查表LUT）
 * [x] 直方图，灰度图片均衡化，观察像素分布
-* [x] 旋转，similarity transform，Affine Transform，Perspective Transform
+* [x] 旋转：similarity transform，Affine Transform，Perspective Transform三者的区别
 * [x] 沿横轴放大加平移，沿x轴剪切变换，旋转，顺时针旋转，多种组合
 
+**Week2**
+
+​	参考：<https://blog.csdn.net/wsp_1138886114/article/details/81368890#13_Sobel_30>
+
+* [x] 图象卷积： 卷积翻转的有无必要性问题
+* [x] 图像梯度变化，一阶导核二阶导的简单理解
+* [x] 二阶导的双边效应核精细结构，增强作用
+* [x] 高斯模糊，能够加速的原因，如何做到模糊
+* [x] 二阶导的应用=》锐化，增加了颗粒感，核取反，类似小方差的高斯，保持了图像清晰度同时有边缘效果；
+* [x] sobel算子（一阶导）：可以考虑x-Y方向的梯度，也考虑对角线的梯度
+* [x] Harris角点
+* [x] SIFT 详解
