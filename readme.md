@@ -1,6 +1,6 @@
 ## CV - note
 
-
+​                                                                                                                                                                                                                                                                                                                          
 
 **Week1**
 
@@ -52,3 +52,32 @@ DFS/BFS/并查集
 - [x] 池化： 最大池化和平均池化
 - [x] dropout  训练和测试注意的问题， 优点
 - [x] BN层，如何使用
+
+**Week7**
+
+- [ ] 网络初始化 Gussian/ Xavier / Kaiming
+- [ ] PCA
+- [ ] 优化方法 SGD，SGD+Momentum，Nesterov，Adagrad，Adam
+
+**Week8**
+
+- [ ] VGG
+- [ ] GoogLeNet  1×1卷积的效果 auxiliaty softmax 不同卷积核的结合类似图像金字塔
+- [ ] ResNet elementwise Addition  shortcut=bottleneck
+- [ ] mobileNet-v1: Depthwise+Printwise  v2: Inverted residual+ linear Bottlenecks
+- [ ] ShuffleNet
+- [ ] FLOPS的计算
+
+**Week 9**
+
+- [ ] Softmax 交叉熵梯度计算
+- [ ] Caffe 使用简单介绍
+- [ ] pytorch 使用简单介绍
+- [ ] 如何解决数据不平衡，从数据，从Loss，从学习策略，Center Loss，Attention机制
+
+**Week10** [参考](<https://imlogm.github.io/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/rcnn/>)
+
+- [ ] Two Stage Detection: RCNN Fast RCNN  Faster RCNN
+- [ ] NMS 和 Soft-NMS
+- [ ] One Stage Detection: Yolo  RetainNet
+

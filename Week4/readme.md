@@ -6,9 +6,9 @@ L1正则化结果容易产生0值，是一个稀疏矩阵，有助于特征选�
 
 L2正则化有利于防止过拟合，倾向于权值尽可能小，因为参数值小的莫i选哪个比较简单，能适应不同的而数据集
 
-$\theta_j := \theta_j(1-\frac{\lambda}{m}) - \alpha\frac{1}{m}\sum_{i=1}^m(h_{\theta}(x^i)-y^i)x_j^i)$
+$ \theta_j := \theta_j(1-\frac{\lambda}{m}) - \alpha\frac{1}{m}\sum_{i=1}^m(h_{\theta}(x^i)-y^i)x_j^i)$
 
-可以看到$\theta_j$ 要剪掉一个小于1的因子，从而使得$\theta_j$ 不断变小，整个总的来说变小的幅度更快了
+可以看到$\theta_j​$ 要剪掉一个小于1的因子，从而使得$\theta_j​$ 不断变小，整个总的来说变小的幅度更快了
 
 #### loss
 

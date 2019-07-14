@@ -35,7 +35,8 @@ SIFT
 '''
 
 # create sift class
-sift = cv2.xfeatures2d.SIFT_create()
+
+sift = cv2.xfeatures2d_SIFT()
 # detect SIFT
 kp = sift.detect(img,None)   # None for mask
 # compute SIFT descriptor
