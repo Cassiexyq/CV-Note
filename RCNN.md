@@ -35,7 +35,7 @@
 
 在SVM中的iou和训练CNN的iou不一样，因为训练CNN需要更多的数据
 
-类别判断，因为负样本较多，使用hard negative mining方法。（iou<0.3）
+类别判断，因为负样本较多，使用hard negative mining方法，也就是说把分错的样本再拿回去重新训练。（iou<0.3）
 
 **nms vs soft-nms**
 
