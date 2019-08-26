@@ -12,7 +12,19 @@ faster rcnn分成rpn网络和fast rcnn网络，fast rcnn网络和之前讲的一
 
 更值得注意的是：这里映射得到的bbox坐标并不是直接的框的四个坐标值，而是四个变化值，即bounding box regression，所以，rpn网络训练学习的并不是直接的四个坐标值，而是4个变化值，这4个变换值，也就是rpn_bbox_pred，会输出到smoothL1。这与fast rcnn网络中使用bounding box regression很类似。不同的是，在fast rcnn网络中，smoothL1计算的是4个变化值和gt框的loss，但在rpn网络smoothL1计算的是**4个变换值和4个变换值的loss**。第一个4个变换值是从网络特征层提取的，第二个4个变换值是anchor和gt框的之间的变换值。第二个4个变换值是由rpn-data层来实现的（代码是rpn.anchor_target_layer）。rpn-data层输出的是gt框和anchor之间的4个变换值，也就是如何让anchor更加接近gt框，loss计算的就是这两个变换值的loss。
 
-在下一个小阶段，直接由anchors根据网络训练的4个变换值在生成最终的anchor坐标，这样也就接近原始数据中的gt框。rpn网络训练过程中，要筛选出256个anchor作为loss计算，正例128个，负例128个。有两种anchor为正例：1.anchor是所有anchor中与某一个gt的iou最大　　2.anchor只要和一个gt的iou大于0.7。只有一种anchor为负例：与所有的gt的iou都小于0.3。注意：虽然两种情况都是positive，但anchor和gt计算4个变换时计算的是anchor和与这个anchor有最大iou的gt框的的4个变换
+在下一个小阶段，直接由anchors根据网络训练的4个变换值在生成最终的anchor坐标，这样也就接近原始数据中的gt框。rpn网络训练过程中，要筛选出256个anchor作为loss计算，正例128个，负例128个。
+
+有两种anchor为正例：
+
+​	1.anchor是所有anchor中与某一个gt的iou最大　　
+
+​	2.anchor只要和一个gt的iou大于0.7。
+
+只有一种anchor为负例：
+
+与所有的gt的iou都小于0.3。
+
+注意：虽然两种情况都是positive，但anchor和gt计算4个变换时计算的是anchor和与这个anchor有最大iou的gt框的的4个变换
 
 源码
 
